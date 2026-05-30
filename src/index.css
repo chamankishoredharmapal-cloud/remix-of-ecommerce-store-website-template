@@ -2,120 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Linea E-commerce Design System - Minimalist & Modern */
+/* House of Padmavati — Coastal Blossom Design System
+   "Sarees · Stories · You" — A digital sanctuary, calm and museum-like. */
 
 @layer base {
   :root {
-    /* Core neutral palette */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 9%;
-    
-    /* Status bar */
-    --status-bar: 0 0% 0%;
-    --status-bar-foreground: 0 0% 100%;
-    
-    /* Navigation */
-    --nav-background: 0 0% 100%;
-    --nav-foreground: 0 0% 20%;
-    --nav-hover: 0 0% 5%;
-    
-    /* Interactive elements */
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --primary-hover: 0 0% 15%;
-    
-    /* Subtle elements */
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 20%;
-    
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
-    
-    --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 9%;
-    
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 9%;
-    
-    /* Cards and surfaces */
+    /* Coastal Blossom palette (HSL) */
+    --jasmine: 40 33% 95%;        /* #F7F4EE */
+    --jasmine-deep: 40 25% 91%;
+    --teal: 174 16% 44%;          /* #5D817E */
+    --teal-deep: 174 22% 28%;
+    --sand: 36 45% 81%;           /* #E4D3BA */
+    --sakura: 8 31% 73%;          /* #CFA9A2 */
+    --ink: 0 0% 15%;              /* #262626 */
+    --ink-soft: 0 0% 30%;
+
+    /* Semantic tokens */
+    --background: var(--jasmine);
+    --foreground: var(--ink);
+
+    --nav-background: var(--jasmine);
+    --nav-foreground: var(--ink);
+    --nav-hover: var(--teal);
+
+    --primary: var(--teal-deep);
+    --primary-foreground: var(--jasmine);
+    --primary-hover: var(--teal);
+
+    --secondary: var(--jasmine-deep);
+    --secondary-foreground: var(--ink);
+
+    --muted: var(--jasmine-deep);
+    --muted-foreground: var(--ink-soft);
+
+    --accent: var(--sand);
+    --accent-foreground: var(--ink);
+
+    --border: 36 20% 86%;
+    --input: 36 20% 86%;
+    --ring: var(--teal);
+
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 9%;
-    
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 9%;
-    
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-    
-    --radius: 0.375rem;
-    
-    /* Transitions */
-    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --card-foreground: var(--ink);
 
-    --sidebar-background: 0 0% 98%;
+    --popover: var(--jasmine);
+    --popover-foreground: var(--ink);
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --destructive: 0 60% 50%;
+    --destructive-foreground: var(--jasmine);
 
-    --sidebar-primary: 240 5.9% 10%;
+    --radius: 0.75rem;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: var(--jasmine);
+    --sidebar-foreground: var(--ink);
+    --sidebar-primary: var(--teal-deep);
+    --sidebar-primary-foreground: var(--jasmine);
+    --sidebar-accent: var(--jasmine-deep);
+    --sidebar-accent-foreground: var(--ink);
+    --sidebar-border: 36 20% 86%;
+    --sidebar-ring: var(--teal);
   }
 
   .dark {
-    --background: 0 0% 9%;
-    --foreground: 0 0% 98%;
-    
-    --status-bar: 0 0% 0%;
-    --status-bar-foreground: 0 0% 100%;
-    
-    --nav-background: 0 0% 9%;
-    --nav-foreground: 0 0% 80%;
-    --nav-hover: 0 0% 95%;
-    
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --primary-hover: 0 0% 90%;
-    
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 80%;
-    
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
-    
-    --accent: 0 0% 15%;
-    --accent-foreground: 0 0% 98%;
-    
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 0 0% 98%;
-    
-    --card: 0 0% 9%;
-    --card-foreground: 0 0% 98%;
-    
-    --popover: 0 0% 9%;
-    --popover-foreground: 0 0% 98%;
-    
-    --destructive: 0 62% 50%;
-    --destructive-foreground: 0 0% 98%;
+    --background: var(--teal-deep);
+    --foreground: var(--jasmine);
+    --card: var(--ink);
+    --card-foreground: var(--jasmine);
+    --primary: var(--sand);
+    --primary-foreground: var(--ink);
+    --border: 174 15% 32%;
+    --input: 174 15% 32%;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
   body {
-    @apply bg-background text-foreground font-light;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "kern", "liga", "calt";
+  }
+  h1, h2, h3, h4, h5 {
+    @apply font-serif font-light tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+  .gallery-shadow {
+    box-shadow: 0 30px 80px -40px hsl(var(--teal-deep) / 0.25);
   }
 }
