@@ -7,8 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Checkbox } from "@/components/ui/checkbox";
-import pantheonImage from "@/assets/pantheon.jpg";
-import eclipseImage from "@/assets/eclipse.jpg";
+import pattuImage from "@/assets/hop-collection-pattu.jpg";
+import linenImage from "@/assets/hop-collection-linen.jpg";
 
 const Checkout = () => {
   const [showDiscountInput, setShowDiscountInput] = useState(false);
@@ -50,18 +50,18 @@ const Checkout = () => {
   const [cartItems, setCartItems] = useState([
     {
       id: 1,
-      name: "Pantheon Ring",
-      price: "€2,450",
+      name: "Padmini Coastal Pattu",
+      price: "₹ 48,000",
       quantity: 1,
-      image: pantheonImage,
-      size: "54 EU / 7 US"
+      image: pattuImage,
+      size: "Drape · 5.5m + blouse"
     },
     {
       id: 2,
-      name: "Eclipse Earrings", 
-      price: "€1,850",
+      name: "Aranya Linen Whisper",
+      price: "₹ 12,400",
       quantity: 1,
-      image: eclipseImage
+      image: linenImage
     }
   ]);
 
