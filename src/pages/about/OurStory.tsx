@@ -4,75 +4,79 @@ import PageHeader from "../../components/about/PageHeader";
 import ContentSection from "../../components/about/ContentSection";
 import ImageTextBlock from "../../components/about/ImageTextBlock";
 import AboutSidebar from "../../components/about/AboutSidebar";
+import heroImg from "@/assets/hop-hero.jpg";
 
 const OurStory = () => {
   return (
     <div className="min-h-screen bg-background">
       <HopHeader />
-      
+
       <div className="flex">
         <div className="hidden lg:block">
           <AboutSidebar />
         </div>
-        
+
         <main className="w-full lg:w-[70vw] lg:ml-auto px-6">
-          <PageHeader 
-            title="Our Story" 
-            subtitle="A journey of passion, craftsmanship, and timeless elegance"
+          <PageHeader
+            title="A House, not a shop."
+            subtitle="House of Padmavati was born from the quiet rhythm of a loom — a love letter to the woman who wove our world."
           />
-          
+
           <ContentSection>
             <ImageTextBlock
-              image="/founders.png"
-              imageAlt="Company founders"
-              title="Founded on Passion"
-              content="LINEA Jewelry was born from a shared vision of creating timeless pieces that transcend fleeting trends. Our founders, united by their passion for exceptional craftsmanship and sustainable practices, established the brand with a commitment to creating jewelry that tells a story - your story."
+              image={heroImg}
+              imageAlt="A weaver at her pit loom in early morning light"
+              title="To the woman who wove my world."
+              content="House of Padmavati began as a private dedication — to a mother, a grandmother, an aunt; to the women whose hands carry the memory of cloth. We make sarees the way they were once made for our own homes: slowly, with care, and without noise. No countdown timers. No aggressive sales. Only the cloth, the woman, and the story between them."
               imagePosition="left"
             />
           </ContentSection>
 
-          <ContentSection title="Our Heritage">
+          <ContentSection title="The Coastal Blossom">
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-6">
-                <h3 className="text-xl font-light text-foreground">Traditional Craftsmanship</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Every piece in our collection is meticulously handcrafted by skilled artisans who have honed their craft over generations. We honor traditional techniques while embracing modern innovation, ensuring each piece meets our exacting standards for quality and beauty.
+                <h3 className="font-serif text-2xl text-ink">A palette, a feeling</h3>
+                <p className="text-ink-soft leading-relaxed font-light">
+                  Every Padmavati saree is calibrated to a single ratio — sixty per cent Jasmine Mist,
+                  twenty-five per cent Coastal Teal, ten per cent Golden Sand, five per cent Sakura blush.
+                  It is the colour of a coastal morning in South India, held still.
                 </p>
               </div>
               <div className="space-y-6">
-                <h3 className="text-xl font-light text-foreground">Sustainable Future</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  We believe luxury and sustainability can coexist beautifully. Our commitment to ethical sourcing, recycled materials, and responsible manufacturing practices ensures that every piece you wear contributes to a more sustainable future.
+                <h3 className="font-serif text-2xl text-ink">A house, not a shop</h3>
+                <p className="text-ink-soft leading-relaxed font-light">
+                  We are not a marketplace. We are a small studio that releases a handful of sarees each
+                  month — each one a vessel for a memory, designed to be passed on, never thrown away.
                 </p>
               </div>
             </div>
           </ContentSection>
 
-          <ContentSection title="Our Values">
+          <ContentSection title="What we hold to">
             <div className="grid md:grid-cols-3 gap-8">
               <div className="space-y-4">
-                <h3 className="text-lg font-light text-foreground">Excellence</h3>
-                <p className="text-muted-foreground">
-                  We pursue perfection in every detail, from the initial design concept to the final polish.
+                <h3 className="font-serif text-xl text-ink">Slowness</h3>
+                <p className="text-ink-soft font-light">
+                  Twenty-one days on the loom, not twenty-one minutes on a feed.
                 </p>
               </div>
               <div className="space-y-4">
-                <h3 className="text-lg font-light text-foreground">Authenticity</h3>
-                <p className="text-muted-foreground">
-                  Each piece reflects genuine craftsmanship and tells an authentic story of artistry and care.
+                <h3 className="font-serif text-xl text-ink">Quietness</h3>
+                <p className="text-ink-soft font-light">
+                  No badges, no banners, no urgency. Only the cloth, photographed in daylight.
                 </p>
               </div>
               <div className="space-y-4">
-                <h3 className="text-lg font-light text-foreground">Innovation</h3>
-                <p className="text-muted-foreground">
-                  We continuously evolve our designs and techniques while honoring timeless aesthetic principles.
+                <h3 className="font-serif text-xl text-ink">Continuance</h3>
+                <p className="text-ink-soft font-light">
+                  A Padmavati is meant to outlive its first wearer — a modern heirloom.
                 </p>
               </div>
             </div>
           </ContentSection>
         </main>
       </div>
-      
+
       <HopFooter />
     </div>
   );
