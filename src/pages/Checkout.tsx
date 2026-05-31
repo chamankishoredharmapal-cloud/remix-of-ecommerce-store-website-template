@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { Minus, Plus, CreditCard, Check } from "lucide-react";
-import CheckoutHeader from "../components/header/CheckoutHeader";
-import Footer from "../components/footer/Footer";
+import HopHeader from "../components/hop/HopHeader";
+import HopFooter from "../components/hop/HopFooter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Checkbox } from "@/components/ui/checkbox";
-import pantheonImage from "@/assets/pantheon.jpg";
-import eclipseImage from "@/assets/eclipse.jpg";
+import pattuImage from "@/assets/hop-collection-pattu.jpg";
+import linenImage from "@/assets/hop-collection-linen.jpg";
 
 const Checkout = () => {
   const [showDiscountInput, setShowDiscountInput] = useState(false);
@@ -50,18 +50,18 @@ const Checkout = () => {
   const [cartItems, setCartItems] = useState([
     {
       id: 1,
-      name: "Pantheon Ring",
-      price: "€2,450",
+      name: "Padmini Coastal Pattu",
+      price: "₹ 48,000",
       quantity: 1,
-      image: pantheonImage,
-      size: "54 EU / 7 US"
+      image: pattuImage,
+      size: "Drape · 5.5m + blouse"
     },
     {
       id: 2,
-      name: "Eclipse Earrings", 
-      price: "€1,850",
+      name: "Aranya Linen Whisper",
+      price: "₹ 12,400",
       quantity: 1,
-      image: eclipseImage
+      image: linenImage
     }
   ]);
 
@@ -78,7 +78,7 @@ const Checkout = () => {
   };
 
   const subtotal = cartItems.reduce((sum, item) => {
-    const price = parseFloat(item.price.replace('€', '').replace(',', ''));
+    const price = parseFloat(item.price.replace(/[^\d.]/g, ''));
     return sum + (price * item.quantity);
   }, 0);
 
@@ -130,7 +130,7 @@ const Checkout = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <CheckoutHeader />
+      <HopHeader />
       
       <main className="pt-6 pb-12">
         <div className="max-w-7xl mx-auto px-6">
@@ -220,7 +220,7 @@ const Checkout = () => {
                 <div className="border-t border-muted-foreground/20 mt-4 pt-6">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Subtotal</span>
-                    <span className="text-foreground">€{subtotal.toLocaleString()}</span>
+                    <span className="text-foreground">₹ {subtotal.toLocaleString()}</span>
                   </div>
                 </div>
               </div>
@@ -524,7 +524,7 @@ const Checkout = () => {
                     </Label>
                   </div>
                   <div className="text-sm text-muted-foreground">
-                    €15 • 1-2 business days
+                    ₹ 800 • 1-2 business days
                   </div>
                 </div>
 
@@ -536,7 +536,7 @@ const Checkout = () => {
                     </Label>
                   </div>
                   <div className="text-sm text-muted-foreground">
-                    €35 • Next business day
+                    ₹ 2,400 • Next business day
                   </div>
                 </div>
               </RadioGroup>
@@ -630,17 +630,17 @@ const Checkout = () => {
                   <div className="bg-muted/10 p-6 rounded-none border border-muted-foreground/20 space-y-3">
                     <div className="flex justify-between text-sm">
                       <span className="text-muted-foreground">Subtotal</span>
-                      <span className="text-foreground">€{subtotal.toLocaleString()}</span>
+                      <span className="text-foreground">₹ {subtotal.toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between text-sm">
                       <span className="text-muted-foreground">Shipping</span>
                       <span className="text-foreground">
-                        {shipping === 0 ? "Free" : `€${shipping}`}
+                        {shipping === 0 ? "Free" : `₹ ${shipping}`}
                       </span>
                     </div>
                     <div className="flex justify-between text-lg font-medium border-t border-muted-foreground/20 pt-3">
                       <span className="text-foreground">Total</span>
-                      <span className="text-foreground">€{total.toLocaleString()}</span>
+                      <span className="text-foreground">₹ {total.toLocaleString()}</span>
                     </div>
                   </div>
 
@@ -649,7 +649,7 @@ const Checkout = () => {
                     disabled={isProcessing || !paymentDetails.cardNumber || !paymentDetails.expiryDate || !paymentDetails.cvv || !paymentDetails.cardholderName}
                     className="w-full rounded-none h-12 text-base"
                   >
-                    {isProcessing ? "Processing..." : `Complete Order • €${total.toLocaleString()}`}
+                    {isProcessing ? "Processing..." : `Complete Order • ₹ ${total.toLocaleString()}`}
                   </Button>
                 </div>
               ) : (
@@ -667,7 +667,7 @@ const Checkout = () => {
         </div>
       </main>
 
-      <Footer />
+      <HopFooter />
     </div>
   );
 };

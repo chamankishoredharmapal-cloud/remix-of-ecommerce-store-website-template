@@ -11,9 +11,11 @@ import pattuImg from "@/assets/hop-collection-pattu.jpg";
 import organzaImg from "@/assets/hop-collection-organza.jpg";
 
 const collections = [
-  { name: "Heritage Pattu", note: "Coastal Teal silks, golden zari.", img: pattuImg, href: "/category/pattu" },
-  { name: "Linen Calm", note: "Daily wear, breathing space.", img: linenImg, href: "/category/linen" },
-  { name: "Organza Light", note: "Sheer, almost weightless.", img: organzaImg, href: "/category/organza" },
+  { name: "Heritage Pattu", note: "Coastal teal silks, golden zari, woven the slow way.", img: pattuImg, href: "/category/pattu" },
+  { name: "Wedding", note: "Ceremonial weaves for the quiet, modern bride.", img: fabricImg, href: "/category/wedding" },
+  { name: "Contemporary Luxury", note: "Heirloom restraint, made for today's wardrobe.", img: giftImg, href: "/category/contemporary" },
+  { name: "Organza Light", note: "Sheer, weightless, almost a whisper.", img: organzaImg, href: "/category/organza" },
+  { name: "Linen Calm", note: "Everyday drape, with room to breathe.", img: linenImg, href: "/category/linen" },
 ];
 
 const bestSellers = [
@@ -33,39 +35,39 @@ const Index = () => {
           {/* Watermark monogram */}
           <Monogram
             variant="signature"
-            className="pointer-events-none absolute -left-[6%] top-1/2 -translate-y-1/2 h-[120%] opacity-[0.04] hidden lg:block"
+            className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[160%] opacity-[0.04] hidden lg:block"
           />
 
-          <div className="grid lg:grid-cols-12 gap-0 min-h-[92vh] relative">
-            <div className="lg:col-span-5 flex items-center justify-center px-6 lg:pl-16 py-20 lg:py-0">
+          <div className="grid lg:grid-cols-5 gap-0 min-h-[92vh] relative">
+            <div className="lg:col-span-2 flex items-center justify-center px-6 lg:pl-16 py-20 lg:py-0">
               <div className="max-w-md w-full flex flex-col items-center text-center">
                 {/* Brand lockup */}
                 <Monogram
                   variant="signature"
-                  className="h-40 md:h-48 lg:h-56 -mb-2 animate-fade-in"
-                  style={{ animationDuration: "1.6s", animationDelay: "0.1s", animationFillMode: "both" }}
+                  className="h-48 md:h-56 lg:h-64 -mb-2 animate-fade-in"
+                  style={{ animationDuration: "1.2s", animationDelay: "0.1s", animationFillMode: "both" }}
                 />
                 <h1
-                  className="font-serif text-2xl md:text-[1.7rem] tracking-[0.22em] text-ink font-medium uppercase animate-fade-in"
-                  style={{ animationDuration: "1.6s", animationDelay: "0.7s", animationFillMode: "both" }}
+                  className="font-serif text-2xl md:text-[1.7rem] tracking-[0.42em] text-ink font-medium uppercase animate-fade-in"
+                  style={{ animationDuration: "1.2s", animationDelay: "0.4s", animationFillMode: "both" }}
                 >
                   House of Padmavati
                 </h1>
                 <p
-                  className="mt-3 text-[0.7rem] tracking-[0.32em] uppercase text-teal animate-fade-in"
-                  style={{ animationDuration: "1.6s", animationDelay: "1.2s", animationFillMode: "both" }}
+                  className="mt-3 text-[0.7rem] tracking-[0.42em] uppercase text-teal animate-fade-in"
+                  style={{ animationDuration: "1.2s", animationDelay: "0.7s", animationFillMode: "both" }}
                 >
                   A House, not a shop
                 </p>
 
                 <div
                   className="my-8 h-px w-12 bg-ink/20 animate-fade-in"
-                  style={{ animationDuration: "1.6s", animationDelay: "1.6s", animationFillMode: "both" }}
+                  style={{ animationDuration: "1.2s", animationDelay: "0.9s", animationFillMode: "both" }}
                 />
 
                 <div
                   className="space-y-7 animate-fade-in"
-                  style={{ animationDuration: "1.6s", animationDelay: "1.8s", animationFillMode: "both" }}
+                  style={{ animationDuration: "1.2s", animationDelay: "1.1s", animationFillMode: "both" }}
                 >
                   <p className="font-serif italic text-2xl md:text-3xl text-ink leading-snug text-balance">
                     To the woman who wove my world.
@@ -77,7 +79,7 @@ const Index = () => {
                   <div className="flex items-center justify-center gap-6 pt-2">
                     <Link
                       to="/category/pattu"
-                      className="group inline-flex items-center gap-2 bg-teal-deep text-jasmine px-7 py-3.5 text-xs tracking-[0.22em] uppercase rounded-full hover:bg-teal transition-colors"
+                      className="group inline-flex items-center gap-2 bg-teal-deep text-jasmine px-7 py-3.5 text-[0.7rem] tracking-[0.32em] uppercase rounded-full hover:bg-teal transition-colors duration-500"
                     >
                       Enter the gallery
                       <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -90,7 +92,7 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="lg:col-span-7 relative bg-jasmine-deep min-h-[60vh] lg:min-h-0">
+            <div className="lg:col-span-3 relative bg-jasmine-deep min-h-[60vh] lg:min-h-0">
               <img
                 src={heroImg}
                 alt="A woman in a coastal teal silk saree photographed in soft morning sunlight"
@@ -98,7 +100,7 @@ const Index = () => {
                 width={1920}
                 height={1280}
               />
-              <div className="absolute bottom-6 right-6 bg-jasmine/90 backdrop-blur-sm px-5 py-3 rounded-full text-[0.7rem] tracking-[0.25em] uppercase text-ink-soft">
+              <div className="absolute bottom-6 right-6 bg-jasmine/90 backdrop-blur-sm px-5 py-3 rounded-full text-[0.65rem] tracking-[0.32em] uppercase text-ink-soft">
                 Padmini · Coastal Pattu
               </div>
             </div>
@@ -132,24 +134,31 @@ const Index = () => {
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-10">
-            {collections.map((c) => (
-              <Link key={c.name} to={c.href} className="group block">
-                <div className="aspect-[3/4] overflow-hidden rounded-md bg-jasmine-deep">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+            {collections.map((c, i) => (
+              <Link
+                key={c.name}
+                to={c.href}
+                className={`group block ${i === 0 ? "lg:col-span-2 lg:row-span-2" : ""}`}
+              >
+                <div className={`overflow-hidden rounded-md bg-jasmine-deep ${i === 0 ? "aspect-[4/5] lg:aspect-[5/6]" : "aspect-[3/4]"}`}>
                   <img
                     src={c.img}
                     alt={c.name}
                     loading="lazy"
-                    width={1080}
-                    height={1440}
-                    className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+                    width={1200}
+                    height={1500}
+                    className="w-full h-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.04]"
                   />
                 </div>
-                <div className="mt-5 flex items-baseline justify-between">
-                  <h3 className="font-serif text-2xl text-ink">{c.name}</h3>
-                  <ArrowRight className="w-4 h-4 text-teal opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="mt-6 flex items-baseline justify-between">
+                  <h3 className={`font-serif text-ink ${i === 0 ? "text-3xl lg:text-4xl" : "text-2xl"}`}>{c.name}</h3>
+                  <ArrowRight className="w-4 h-4 text-teal opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
-                <p className="text-sm font-light text-ink-soft mt-1">{c.note}</p>
+                <p className="text-sm font-light text-ink-soft mt-2 max-w-md">{c.note}</p>
+                <span className="mt-3 inline-block text-[0.65rem] tracking-[0.32em] uppercase text-teal-deep border-b border-teal-deep/40 pb-0.5">
+                  Explore Collection
+                </span>
               </Link>
             ))}
           </div>
