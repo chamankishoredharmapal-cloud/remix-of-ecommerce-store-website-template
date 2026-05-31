@@ -29,35 +29,68 @@ const Index = () => {
       <HopHeader />
       <main>
         {/* HERO ---------------------------------------------------------- */}
-        <section className="relative">
-          <div className="grid lg:grid-cols-12 gap-0 min-h-[88vh]">
-            <div className="lg:col-span-5 flex items-center px-6 lg:pl-16 py-20 lg:py-0">
-              <div className="max-w-md space-y-8 animate-fade-up">
-                <p className="text-xs tracking-[0.4em] uppercase text-teal">Monsoon Collection · 2026</p>
-                <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-ink text-balance">
-                  Where the sun moves<br/>
-                  <em className="text-teal font-light">through silk.</em>
+        <section className="relative overflow-hidden">
+          {/* Watermark monogram */}
+          <Monogram
+            variant="signature"
+            className="pointer-events-none absolute -left-[6%] top-1/2 -translate-y-1/2 h-[120%] opacity-[0.04] hidden lg:block"
+          />
+
+          <div className="grid lg:grid-cols-12 gap-0 min-h-[92vh] relative">
+            <div className="lg:col-span-5 flex items-center justify-center px-6 lg:pl-16 py-20 lg:py-0">
+              <div className="max-w-md w-full flex flex-col items-center text-center">
+                {/* Brand lockup */}
+                <Monogram
+                  variant="signature"
+                  className="h-40 md:h-48 lg:h-56 -mb-2 animate-fade-in"
+                  style={{ animationDuration: "1.6s", animationDelay: "0.1s", animationFillMode: "both" }}
+                />
+                <h1
+                  className="font-serif text-2xl md:text-[1.7rem] tracking-[0.22em] text-ink font-medium uppercase animate-fade-in"
+                  style={{ animationDuration: "1.6s", animationDelay: "0.7s", animationFillMode: "both" }}
+                >
+                  House of Padmavati
                 </h1>
-                <p className="text-base font-light text-ink-soft leading-relaxed max-w-sm text-pretty">
-                  A digital sanctuary for sarees woven with quiet artistry — heritage Pattu, whispered linen,
-                  and organza that breathes with morning light.
+                <p
+                  className="mt-3 text-[0.7rem] tracking-[0.32em] uppercase text-teal animate-fade-in"
+                  style={{ animationDuration: "1.6s", animationDelay: "1.2s", animationFillMode: "both" }}
+                >
+                  A House, not a shop
                 </p>
-                <div className="flex items-center gap-6 pt-2">
-                  <Link
-                    to="/category/pattu"
-                    className="group inline-flex items-center gap-2 bg-teal-deep text-jasmine px-7 py-3.5 text-sm tracking-[0.18em] uppercase rounded-full hover:bg-teal transition-colors"
-                  >
-                    Enter the gallery
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                  </Link>
-                  <Link to="/about/our-story" className="text-sm font-light text-ink underline-offset-4 hover:underline">
-                    Our story
-                  </Link>
+
+                <div
+                  className="my-8 h-px w-12 bg-ink/20 animate-fade-in"
+                  style={{ animationDuration: "1.6s", animationDelay: "1.6s", animationFillMode: "both" }}
+                />
+
+                <div
+                  className="space-y-7 animate-fade-in"
+                  style={{ animationDuration: "1.6s", animationDelay: "1.8s", animationFillMode: "both" }}
+                >
+                  <p className="font-serif italic text-2xl md:text-3xl text-ink leading-snug text-balance">
+                    To the woman who wove my world.
+                  </p>
+                  <p className="text-sm font-light text-ink-soft leading-relaxed max-w-sm mx-auto text-pretty">
+                    A digital sanctuary for sarees woven with quiet artistry — heritage Pattu,
+                    whispered linen, and organza that breathes with morning light.
+                  </p>
+                  <div className="flex items-center justify-center gap-6 pt-2">
+                    <Link
+                      to="/category/pattu"
+                      className="group inline-flex items-center gap-2 bg-teal-deep text-jasmine px-7 py-3.5 text-xs tracking-[0.22em] uppercase rounded-full hover:bg-teal transition-colors"
+                    >
+                      Enter the gallery
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                    <Link to="/about/our-story" className="text-sm font-light text-ink underline-offset-4 hover:underline">
+                      Our story
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="lg:col-span-7 relative bg-jasmine-deep">
+            <div className="lg:col-span-7 relative bg-jasmine-deep min-h-[60vh] lg:min-h-0">
               <img
                 src={heroImg}
                 alt="A woman in a coastal teal silk saree photographed in soft morning sunlight"
