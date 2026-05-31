@@ -524,7 +524,7 @@ const Checkout = () => {
                     </Label>
                   </div>
                   <div className="text-sm text-muted-foreground">
-                    €15 • 1-2 business days
+                    ₹ 800 • 1-2 business days
                   </div>
                 </div>
 
@@ -536,7 +536,7 @@ const Checkout = () => {
                     </Label>
                   </div>
                   <div className="text-sm text-muted-foreground">
-                    €35 • Next business day
+                    ₹ 2,400 • Next business day
                   </div>
                 </div>
               </RadioGroup>
