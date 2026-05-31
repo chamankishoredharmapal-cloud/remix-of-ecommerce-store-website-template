@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Minus, Plus, CreditCard, Check } from "lucide-react";
-import CheckoutHeader from "../components/header/CheckoutHeader";
-import Footer from "../components/footer/Footer";
+import HopHeader from "../components/hop/HopHeader";
+import HopFooter from "../components/hop/HopFooter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -130,7 +130,7 @@ const Checkout = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <CheckoutHeader />
+      <HopHeader />
       
       <main className="pt-6 pb-12">
         <div className="max-w-7xl mx-auto px-6">
@@ -667,7 +667,7 @@ const Checkout = () => {
         </div>
       </main>
 
-      <Footer />
+      <HopFooter />
     </div>
   );
 };

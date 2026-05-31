@@ -1,5 +1,5 @@
-import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
+import HopHeader from "../../components/hop/HopHeader";
+import HopFooter from "../../components/hop/HopFooter";
 import PageHeader from "../../components/about/PageHeader";
 import ContentSection from "../../components/about/ContentSection";
 import AboutSidebar from "../../components/about/AboutSidebar";
@@ -7,7 +7,7 @@ import AboutSidebar from "../../components/about/AboutSidebar";
 const Sustainability = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <HopHeader />
       
       <div className="flex">
         <div className="hidden lg:block">
@@ -103,7 +103,7 @@ const Sustainability = () => {
         </main>
       </div>
       
-      <Footer />
+      <HopFooter />
     </div>
   );
 };

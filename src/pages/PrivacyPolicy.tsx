@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import Header from "../components/header/Header";
-import Footer from "../components/footer/Footer";
+import HopHeader from "../components/hop/HopHeader";
+import HopFooter from "../components/hop/HopFooter";
 
 const PrivacyPolicy = () => {
   useEffect(() => {
@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <HopHeader />
       
       <main className="pt-6">
         <div className="max-w-4xl mx-auto px-6 py-12">
@@ -130,7 +130,7 @@ const PrivacyPolicy = () => {
         </div>
       </main>
       
-      <Footer />
+      <HopFooter />
     </div>
   );
 };
