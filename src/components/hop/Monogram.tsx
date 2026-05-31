@@ -7,6 +7,7 @@ interface MonogramProps {
   className?: string;
   withWordmark?: boolean;
   variant?: "signature" | "primary" | "seal";
+  style?: React.CSSProperties;
 }
 
 /**
