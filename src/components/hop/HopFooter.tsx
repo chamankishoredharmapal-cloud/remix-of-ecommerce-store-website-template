@@ -8,8 +8,10 @@ const HopFooter = () => {
         {/* Brand column */}
         <div className="space-y-6">
           <div className="text-jasmine">
-            <Monogram className="h-12 [&_svg]:text-jasmine [&_span]:text-jasmine" />
-            <p className="mt-4 font-serif text-2xl leading-tight max-w-xs">
+            <div className="inline-block bg-jasmine rounded-md p-3">
+              <Monogram variant="primary" className="h-16" />
+            </div>
+            <p className="mt-6 font-serif text-2xl leading-tight max-w-xs">
               To the woman who wove my world.
             </p>
           </div>
