@@ -220,7 +220,7 @@ const Checkout = () => {
                 <div className="border-t border-muted-foreground/20 mt-4 pt-6">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Subtotal</span>
-                    <span className="text-foreground">€{subtotal.toLocaleString()}</span>
+                    <span className="text-foreground">₹ {subtotal.toLocaleString()}</span>
                   </div>
                 </div>
               </div>
@@ -630,17 +630,17 @@ const Checkout = () => {
                   <div className="bg-muted/10 p-6 rounded-none border border-muted-foreground/20 space-y-3">
                     <div className="flex justify-between text-sm">
                       <span className="text-muted-foreground">Subtotal</span>
-                      <span className="text-foreground">€{subtotal.toLocaleString()}</span>
+                      <span className="text-foreground">₹ {subtotal.toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between text-sm">
                       <span className="text-muted-foreground">Shipping</span>
                       <span className="text-foreground">
-                        {shipping === 0 ? "Free" : `€${shipping}`}
+                        {shipping === 0 ? "Free" : `₹ ${shipping}`}
                       </span>
                     </div>
                     <div className="flex justify-between text-lg font-medium border-t border-muted-foreground/20 pt-3">
                       <span className="text-foreground">Total</span>
-                      <span className="text-foreground">€{total.toLocaleString()}</span>
+                      <span className="text-foreground">₹ {total.toLocaleString()}</span>
                     </div>
                   </div>
 
@@ -649,7 +649,7 @@ const Checkout = () => {
                     disabled={isProcessing || !paymentDetails.cardNumber || !paymentDetails.expiryDate || !paymentDetails.cvv || !paymentDetails.cardholderName}
                     className="w-full rounded-none h-12 text-base"
                   >
-                    {isProcessing ? "Processing..." : `Complete Order • €${total.toLocaleString()}`}
+                    {isProcessing ? "Processing..." : `Complete Order • ₹ ${total.toLocaleString()}`}
                   </Button>
                 </div>
               ) : (
