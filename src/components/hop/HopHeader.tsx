@@ -4,6 +4,7 @@ import { Search, Heart, ShoppingBag, User, Menu, X } from "lucide-react";
 import Monogram from "./Monogram";
 
 const collections = [
+  { label: "Collections", href: "/collections" },
   { label: "Heritage Pattu", href: "/category/pattu" },
   { label: "Wedding", href: "/category/wedding" },
   { label: "Contemporary", href: "/category/contemporary" },
@@ -26,11 +27,11 @@ const HopHeader = () => {
         Every saree carries a story · Woven for modern heirlooms
       </div>
 
-      <div className="container flex items-center justify-between h-24">
+      <div className="container flex items-center justify-between h-20 md:h-24 gap-3">
         {/* Left: nav (desktop) */}
-        <nav className="hidden lg:flex items-center gap-7 text-[0.78rem] font-light text-ink tracking-[0.14em] uppercase w-1/3">
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-7 text-[0.72rem] xl:text-[0.78rem] font-light text-ink tracking-[0.14em] uppercase w-1/3">
           {collections.slice(0, 3).map((c) => (
-            <Link key={c.href} to={c.href} className="hover:text-teal transition-colors duration-500">
+            <Link key={c.href} to={c.href} className="hover:text-teal transition-colors duration-500 whitespace-nowrap">
               {c.label}
             </Link>
           ))}
@@ -46,17 +47,17 @@ const HopHeader = () => {
         </button>
 
         {/* Centre: logo */}
-        <Link to="/" className="flex-1 lg:flex-none flex flex-col items-center justify-center" aria-label="House of Padmavati home">
-          <Monogram variant="signature" className="h-14 md:h-16" />
-          <span className="mt-1 font-serif text-[0.7rem] md:text-xs tracking-[0.42em] uppercase text-ink">
+        <Link to="/" className="flex-1 lg:flex-none flex flex-col items-center justify-center min-w-0" aria-label="House of Padmavati home">
+          <Monogram variant="signature" className="h-11 sm:h-12 md:h-14 lg:h-16" />
+          <span className="mt-1 font-serif text-[0.6rem] sm:text-[0.65rem] md:text-xs tracking-[0.32em] sm:tracking-[0.42em] uppercase text-ink whitespace-nowrap">
             House of Padmavati
           </span>
         </Link>
 
         {/* Right: utilities */}
-        <div className="hidden lg:flex items-center gap-6 text-[0.78rem] font-light text-ink tracking-[0.14em] uppercase w-1/3 justify-end">
+        <div className="hidden lg:flex items-center gap-5 xl:gap-6 text-[0.72rem] xl:text-[0.78rem] font-light text-ink tracking-[0.14em] uppercase w-1/3 justify-end">
           {collections.slice(3).map((c) => (
-            <Link key={c.href} to={c.href} className="hover:text-teal transition-colors duration-500">
+            <Link key={c.href} to={c.href} className="hover:text-teal transition-colors duration-500 whitespace-nowrap">
               {c.label}
             </Link>
           ))}
