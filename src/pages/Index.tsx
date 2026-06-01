@@ -108,14 +108,14 @@ const Index = () => {
         </section>
 
         {/* BRAND STORY --------------------------------------------------- */}
-        <section className="container py-32 text-center">
-          <Monogram className="h-14 mx-auto mb-8 animate-drift" />
-          <p className="text-xs tracking-[0.4em] uppercase text-teal mb-6">A House, not a shop</p>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl max-w-3xl mx-auto text-balance leading-tight">
+        <section className="container py-20 sm:py-24 lg:py-32 text-center">
+          <Monogram className="h-12 sm:h-14 mx-auto mb-6 sm:mb-8 animate-drift" />
+          <p className="text-[0.65rem] sm:text-xs tracking-[0.4em] uppercase text-teal mb-5 sm:mb-6">A House, not a shop</p>
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-3xl mx-auto text-balance leading-tight">
             "To the woman who wove my world —<br/>
             <em className="text-teal">this is for you.</em>"
           </h2>
-          <p className="mt-10 max-w-2xl mx-auto text-ink-soft font-light leading-relaxed text-pretty">
+          <p className="mt-8 sm:mt-10 max-w-2xl mx-auto text-sm sm:text-base text-ink-soft font-light leading-relaxed text-pretty">
             House of Padmavati was born from the quiet rhythm of a loom and the warmth of a mother's lap.
             Each saree is a vessel of memory — fresh, calm, intelligent, and quietly beautiful — designed
             to be passed on, never thrown away.
@@ -123,13 +123,13 @@ const Index = () => {
         </section>
 
         {/* FEATURED COLLECTIONS ------------------------------------------ */}
-        <section className="container pb-24">
-          <div className="flex items-end justify-between mb-12">
+        <section className="container pb-20 sm:pb-24">
+          <div className="flex items-end justify-between mb-10 sm:mb-12 gap-4">
             <div>
-              <p className="text-xs tracking-[0.4em] uppercase text-teal mb-3">Collections</p>
-              <h2 className="font-serif text-4xl md:text-5xl">The Coastal Blossom.</h2>
+              <p className="text-[0.65rem] sm:text-xs tracking-[0.4em] uppercase text-teal mb-3">Collections</p>
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl">The Coastal Blossom.</h2>
             </div>
-            <Link to="/category/all" className="hidden md:inline text-sm font-light text-ink hover:text-teal underline underline-offset-4">
+            <Link to="/collections" className="hidden md:inline text-sm font-light text-ink hover:text-teal underline underline-offset-4 whitespace-nowrap">
               View all
             </Link>
           </div>
