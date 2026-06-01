@@ -1,5 +1,8 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
+import HopHeader from "@/components/hop/HopHeader";
+import HopFooter from "@/components/hop/HopFooter";
+import Monogram from "@/components/hop/Monogram";
 
 const NotFound = () => {
   const location = useLocation();
@@ -9,14 +12,25 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">404</h1>
-        <p className="mb-4 text-xl text-gray-600">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 underline hover:text-blue-700">
-          Return to Home
-        </a>
-      </div>
+    <div className="min-h-screen bg-background text-foreground flex flex-col">
+      <HopHeader />
+      <main className="flex-1 flex items-center justify-center px-6 py-32">
+        <div className="text-center max-w-md">
+          <Monogram variant="signature" className="h-20 mx-auto mb-8 opacity-70" />
+          <p className="text-xs tracking-[0.4em] uppercase text-teal mb-4">Lost in the weave</p>
+          <h1 className="font-serif text-5xl md:text-6xl text-ink mb-6">404</h1>
+          <p className="text-ink-soft font-light leading-relaxed mb-10">
+            The page you are looking for has slipped quietly away. Let us return you to the house.
+          </p>
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 bg-teal-deep text-jasmine px-7 py-3.5 text-[0.7rem] tracking-[0.32em] uppercase rounded-full hover:bg-teal transition-colors"
+          >
+            Return home
+          </Link>
+        </div>
+      </main>
+      <HopFooter />
     </div>
   );
 };
