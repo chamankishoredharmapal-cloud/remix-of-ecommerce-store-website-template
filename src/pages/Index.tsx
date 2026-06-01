@@ -38,48 +38,48 @@ const Index = () => {
             className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[160%] opacity-[0.04] hidden lg:block"
           />
 
-          <div className="grid lg:grid-cols-5 gap-0 min-h-[92vh] relative">
-            <div className="lg:col-span-2 flex items-center justify-center px-6 lg:pl-16 py-20 lg:py-0">
+          <div className="grid lg:grid-cols-5 gap-0 min-h-[88vh] lg:min-h-[92vh] relative">
+            <div className="lg:col-span-2 flex items-center justify-center px-5 sm:px-6 lg:pl-16 py-14 sm:py-20 lg:py-0">
               <div className="max-w-md w-full flex flex-col items-center text-center">
                 {/* Brand lockup */}
                 <Monogram
                   variant="signature"
-                  className="h-48 md:h-56 lg:h-64 -mb-2 animate-fade-in"
+                  className="h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 -mb-2 animate-fade-in"
                   style={{ animationDuration: "1.2s", animationDelay: "0.1s", animationFillMode: "both" }}
                 />
                 <h1
-                  className="font-serif text-2xl md:text-[1.7rem] tracking-[0.42em] text-ink font-medium uppercase animate-fade-in"
+                  className="font-serif text-lg sm:text-xl md:text-2xl lg:text-[1.7rem] tracking-[0.32em] sm:tracking-[0.42em] text-ink font-medium uppercase animate-fade-in"
                   style={{ animationDuration: "1.2s", animationDelay: "0.4s", animationFillMode: "both" }}
                 >
                   House of Padmavati
                 </h1>
                 <p
-                  className="mt-3 text-[0.7rem] tracking-[0.42em] uppercase text-teal animate-fade-in"
+                  className="mt-3 text-[0.65rem] sm:text-[0.7rem] tracking-[0.32em] sm:tracking-[0.42em] uppercase text-teal animate-fade-in"
                   style={{ animationDuration: "1.2s", animationDelay: "0.7s", animationFillMode: "both" }}
                 >
                   A House, not a shop
                 </p>
 
                 <div
-                  className="my-8 h-px w-12 bg-ink/20 animate-fade-in"
+                  className="my-6 sm:my-8 h-px w-12 bg-ink/20 animate-fade-in"
                   style={{ animationDuration: "1.2s", animationDelay: "0.9s", animationFillMode: "both" }}
                 />
 
                 <div
-                  className="space-y-7 animate-fade-in"
+                  className="space-y-5 sm:space-y-7 animate-fade-in"
                   style={{ animationDuration: "1.2s", animationDelay: "1.1s", animationFillMode: "both" }}
                 >
-                  <p className="font-serif italic text-2xl md:text-3xl text-ink leading-snug text-balance">
+                  <p className="font-serif italic text-xl sm:text-2xl md:text-3xl text-ink leading-snug text-balance">
                     To the woman who wove my world.
                   </p>
                   <p className="text-sm font-light text-ink-soft leading-relaxed max-w-sm mx-auto text-pretty">
                     A digital sanctuary for sarees woven with quiet artistry — heritage Pattu,
                     whispered linen, and organza that breathes with morning light.
                   </p>
-                  <div className="flex items-center justify-center gap-6 pt-2">
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 pt-2">
                     <Link
-                      to="/category/pattu"
-                      className="group inline-flex items-center gap-2 bg-teal-deep text-jasmine px-7 py-3.5 text-[0.7rem] tracking-[0.32em] uppercase rounded-full hover:bg-teal transition-colors duration-500"
+                      to="/collections"
+                      className="group inline-flex items-center gap-2 bg-teal-deep text-jasmine px-6 sm:px-7 py-3 sm:py-3.5 text-[0.65rem] sm:text-[0.7rem] tracking-[0.32em] uppercase rounded-full hover:bg-teal transition-colors duration-500"
                     >
                       Enter the gallery
                       <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -108,14 +108,14 @@ const Index = () => {
         </section>
 
         {/* BRAND STORY --------------------------------------------------- */}
-        <section className="container py-32 text-center">
-          <Monogram className="h-14 mx-auto mb-8 animate-drift" />
-          <p className="text-xs tracking-[0.4em] uppercase text-teal mb-6">A House, not a shop</p>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl max-w-3xl mx-auto text-balance leading-tight">
+        <section className="container py-20 sm:py-24 lg:py-32 text-center">
+          <Monogram className="h-12 sm:h-14 mx-auto mb-6 sm:mb-8 animate-drift" />
+          <p className="text-[0.65rem] sm:text-xs tracking-[0.4em] uppercase text-teal mb-5 sm:mb-6">A House, not a shop</p>
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-3xl mx-auto text-balance leading-tight">
             "To the woman who wove my world —<br/>
             <em className="text-teal">this is for you.</em>"
           </h2>
-          <p className="mt-10 max-w-2xl mx-auto text-ink-soft font-light leading-relaxed text-pretty">
+          <p className="mt-8 sm:mt-10 max-w-2xl mx-auto text-sm sm:text-base text-ink-soft font-light leading-relaxed text-pretty">
             House of Padmavati was born from the quiet rhythm of a loom and the warmth of a mother's lap.
             Each saree is a vessel of memory — fresh, calm, intelligent, and quietly beautiful — designed
             to be passed on, never thrown away.
@@ -123,13 +123,13 @@ const Index = () => {
         </section>
 
         {/* FEATURED COLLECTIONS ------------------------------------------ */}
-        <section className="container pb-24">
-          <div className="flex items-end justify-between mb-12">
+        <section className="container pb-20 sm:pb-24">
+          <div className="flex items-end justify-between mb-10 sm:mb-12 gap-4">
             <div>
-              <p className="text-xs tracking-[0.4em] uppercase text-teal mb-3">Collections</p>
-              <h2 className="font-serif text-4xl md:text-5xl">The Coastal Blossom.</h2>
+              <p className="text-[0.65rem] sm:text-xs tracking-[0.4em] uppercase text-teal mb-3">Collections</p>
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl">The Coastal Blossom.</h2>
             </div>
-            <Link to="/category/all" className="hidden md:inline text-sm font-light text-ink hover:text-teal underline underline-offset-4">
+            <Link to="/collections" className="hidden md:inline text-sm font-light text-ink hover:text-teal underline underline-offset-4 whitespace-nowrap">
               View all
             </Link>
           </div>
