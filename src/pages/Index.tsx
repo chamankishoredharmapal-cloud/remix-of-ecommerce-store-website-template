@@ -38,48 +38,48 @@ const Index = () => {
             className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[160%] opacity-[0.04] hidden lg:block"
           />
 
-          <div className="grid lg:grid-cols-5 gap-0 min-h-[92vh] relative">
-            <div className="lg:col-span-2 flex items-center justify-center px-6 lg:pl-16 py-20 lg:py-0">
+          <div className="grid lg:grid-cols-5 gap-0 min-h-[88vh] lg:min-h-[92vh] relative">
+            <div className="lg:col-span-2 flex items-center justify-center px-5 sm:px-6 lg:pl-16 py-14 sm:py-20 lg:py-0">
               <div className="max-w-md w-full flex flex-col items-center text-center">
                 {/* Brand lockup */}
                 <Monogram
                   variant="signature"
-                  className="h-48 md:h-56 lg:h-64 -mb-2 animate-fade-in"
+                  className="h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 -mb-2 animate-fade-in"
                   style={{ animationDuration: "1.2s", animationDelay: "0.1s", animationFillMode: "both" }}
                 />
                 <h1
-                  className="font-serif text-2xl md:text-[1.7rem] tracking-[0.42em] text-ink font-medium uppercase animate-fade-in"
+                  className="font-serif text-lg sm:text-xl md:text-2xl lg:text-[1.7rem] tracking-[0.32em] sm:tracking-[0.42em] text-ink font-medium uppercase animate-fade-in"
                   style={{ animationDuration: "1.2s", animationDelay: "0.4s", animationFillMode: "both" }}
                 >
                   House of Padmavati
                 </h1>
                 <p
-                  className="mt-3 text-[0.7rem] tracking-[0.42em] uppercase text-teal animate-fade-in"
+                  className="mt-3 text-[0.65rem] sm:text-[0.7rem] tracking-[0.32em] sm:tracking-[0.42em] uppercase text-teal animate-fade-in"
                   style={{ animationDuration: "1.2s", animationDelay: "0.7s", animationFillMode: "both" }}
                 >
                   A House, not a shop
                 </p>
 
                 <div
-                  className="my-8 h-px w-12 bg-ink/20 animate-fade-in"
+                  className="my-6 sm:my-8 h-px w-12 bg-ink/20 animate-fade-in"
                   style={{ animationDuration: "1.2s", animationDelay: "0.9s", animationFillMode: "both" }}
                 />
 
                 <div
-                  className="space-y-7 animate-fade-in"
+                  className="space-y-5 sm:space-y-7 animate-fade-in"
                   style={{ animationDuration: "1.2s", animationDelay: "1.1s", animationFillMode: "both" }}
                 >
-                  <p className="font-serif italic text-2xl md:text-3xl text-ink leading-snug text-balance">
+                  <p className="font-serif italic text-xl sm:text-2xl md:text-3xl text-ink leading-snug text-balance">
                     To the woman who wove my world.
                   </p>
                   <p className="text-sm font-light text-ink-soft leading-relaxed max-w-sm mx-auto text-pretty">
                     A digital sanctuary for sarees woven with quiet artistry — heritage Pattu,
                     whispered linen, and organza that breathes with morning light.
                   </p>
-                  <div className="flex items-center justify-center gap-6 pt-2">
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 pt-2">
                     <Link
-                      to="/category/pattu"
-                      className="group inline-flex items-center gap-2 bg-teal-deep text-jasmine px-7 py-3.5 text-[0.7rem] tracking-[0.32em] uppercase rounded-full hover:bg-teal transition-colors duration-500"
+                      to="/collections"
+                      className="group inline-flex items-center gap-2 bg-teal-deep text-jasmine px-6 sm:px-7 py-3 sm:py-3.5 text-[0.65rem] sm:text-[0.7rem] tracking-[0.32em] uppercase rounded-full hover:bg-teal transition-colors duration-500"
                     >
                       Enter the gallery
                       <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
